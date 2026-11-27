@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Now Playing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="nav" id="nav">
+      <div class="nav-left">
+        <a class="logo" href="#top">N</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#top" class="active">Home</a>
+          <a href="#now-playing">Now Playing</a>
+        </nav>
+      </div>
+      <p class="nav-label">In Theaters</p>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="hero" aria-label="Featured movie">
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Now in theaters</p>
+          <h1 id="hero-title">Loading movies…</h1>
+          <p class="hero-meta" id="hero-meta"></p>
+          <p class="hero-overview" id="hero-overview"></p>
+        </div>
+      </section>
+
+      <section class="row-section" id="now-playing" aria-labelledby="row-title">
+        <div class="row-header">
+          <h2 id="row-title">Now Playing</h2>
+          <p id="row-count"></p>
+        </div>
+        <div class="row-wrap">
+          <button class="scroll-btn prev" id="scroll-prev" type="button" aria-label="Scroll left">
+            &#8249;
+          </button>
+          <div class="row" id="movie-row" role="list"></div>
+          <button class="scroll-btn next" id="scroll-next" type="button" aria-label="Scroll right">
+            &#8250;
+          </button>
+        </div>
+        <p class="status" id="status" role="status">Finding movies in theaters…</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Movie data from TMDB. Posters and titles for films currently in theaters.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
